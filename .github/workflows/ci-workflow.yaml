@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up
-        uses: actions/install@v1
+        uses: ./.github/actions/install
         with:
           node-version: 20
       - name: Lint, Typecheck

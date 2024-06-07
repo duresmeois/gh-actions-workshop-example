@@ -26,12 +26,15 @@ jobs:
   cd-pipeline:
     runs-on: ubuntu-latest
     needs: [ci-pipeline]
-    environment: github-pages
+    environment: 
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
     permissions:
       pages: write
       id-token: write
     steps:
       - name: Publish
+        id: publish
         uses: actions/deploy-pages@v4
         
 

@@ -1,19 +1,11 @@
 name: 'Set up Node'
 description: 'Installs node and dependencies'
 
-# branding:
-#   icon: 'bookmark'
-#   color: 'purple'
-
 inputs:
   node-version:
     description: 'Node version'
     default: 20
     required: true
-
-# outputs:
-#   semver:
-#     description: 'The next semantic version.'
 
 runs:
   using: "composite"

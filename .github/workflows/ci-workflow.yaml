@@ -5,6 +5,8 @@ jobs:
   ci-pipeline:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
       - name: Set up
         uses: ./.github/actions/install
         with:
@@ -44,6 +46,8 @@ jobs:
       matrix:
         browser: ["chromium", "firefox"]
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
       - name: Set up
         uses: actions/install@v1
         with:
